@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+#include<math.h>
 using namespace std;
 
 int main()
@@ -23,13 +23,25 @@ int main()
         cin >> c;
         cout << " a = " << a << ", b = " << b << ", c = " << c << "\n" << endl;
 
-        double answer1 = (-b+sqrt(pow(2, b)-4*a*c))/2*a;
+        double d = b*b-4*a*c;
 
-        cout << "x1 = " << answer1 << endl;
+        double answer1 = (-b + sqrt(d)) / (2*a), answer2 = (-b - sqrt(d)) / (2*a);
 
-        double answer2 = (-b-sqrt(b*b-4*a*c))/2*a;
+        if (answer1 && answer2 >= 0)
+        {
+            cout << "x1 = " << answer1 << endl;
+            cout << "x2 = " << answer2 << endl;
+        } else if (answer1 == 0) {
+            cout << "x1 = i" << endl;
+            cout << "x2 = " << answer2 << endl;
+        } else if (answer2 == 0) {
+            cout << "x1 = " << answer1 << endl;
+            cout << "x2 = i" << endl;
+        } else {
+            cout << "x1 = i" << endl;
+            cout << "x2 = i" << endl;
+        }
 
-        cout << "x2 = " << answer2 << endl;
 
     } else {
 
