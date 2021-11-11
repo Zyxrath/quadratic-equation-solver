@@ -5,7 +5,7 @@ A program designed to solve specific math problems.
 ## Includes
 
 - Quadratic equation
-    - Roots
+    - Nature of roots
     - Discriminant
     - X finder
 - Inverse Variation
