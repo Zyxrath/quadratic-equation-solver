@@ -1,154 +1,87 @@
+#include <string>
 #include <iostream>
-#include<math.h>
+#include <cmath>
 using namespace std;
+
+void QuadraticEquation
 
 int main()
 {
+    float version = 0.1;
 
     int mode;
 
-    cout << "\n Quick Math v0.1" << endl;
-    cout << "  Choose a mode." << endl;
-    cout << " " << endl;
-    cout << " 1. Quadratic Equation" << endl;
-    cout << " 2. Direct and Indirect Variation" << endl;
-    cout << " " << endl;
+    cout << "\n Quick Math: v" << version << endl;
+    cout << "\n 1. Quadratic Equation" << endl;
+    cout << "\n Choose a mode: ";
     cin >> mode;
-    cout << " " << endl;
 
-    if (mode = 1)
-    {
-        cout << " Quadratic Equation " << endl;
+        if (mode == 1)
+        {
+            cout << "\n Quadratic Equation \n" << endl;
 
-        double a = 0, b = 0 , c = 0;
-        double answer;
+            int a, b, c, d;
+            string op1, op2;
 
-        cout << " " << endl;
-        cout << " a = " << a << ", b = " << b << ", c = " << c << "\n"<< endl;
-        cout << " Enter a number for a:" << endl;
-        cin >> a;
+            cout << " Enter the value of a: ";
+            cin >> a;
 
-            if (a != 0)
-            {
+            if (a != 0){
 
-            cout << " " << endl;
-            cout << " a = " << a << ", b = " << b << ", c = " << c << "\n" << endl;
-            cout << " Enter a number for b:" << endl;
+            cout << " Enter plus or minus: ";
+            cin >> op1;
+            cout << " Enter the value of b: ";
             cin >> b;
-
-            cout << " " << endl;
-            cout << " a = " << a << ", b = " << b << ", c = " << c << "\n" << endl;
-            cout << " Enter a number for c:" << endl;
+            cout << " Enter plus or minus: ";
+            cin >> op2;
+            cout << " Enter the value of c: ";
             cin >> c;
 
-            cout << " a = " << a << ", b = " << b << ", c = " << c << "\n" << endl;
-
-            double d = b*b-4*a*c;
-            string noroot = "There are no real roots.", realroot = "There is one real root.", tworealroot = "There are two real roots.";
-            double answer1 = (-b - sqrt(d)) / (2*a), answer2 = (-b + sqrt(d)) / (2*a);
-
-                if (answer1 && answer2 >= 0)
-                {
-
-                    cout << " x1 = " << answer1 << endl;
-                    cout << " x2 = " << answer2 << endl;
-                    cout << "\n Discriminant: " << d << endl;
-
-                    if (d < 0) {
-
-                        cout << " Nature of Roots: " << noroot << endl;
-
-                    } else if (d =  0) {
-
-                        cout << " Nature of Roots: " << realroot << endl;
-
-                    } else {
-
-                        cout << " Nature of Roots: " << tworealroot << endl;
-
-                    }
-
-                } else if (answer1 == 0)
-
-                {
-
-                    cout << " x1 = i" << endl;
-                    cout << " x2 = " << answer2 << endl;
-                    cout << "\n Discriminant: " << d << endl;
-
-                    if (d < 0) {
-
-                        cout << " Nature of Roots: " << noroot << endl;
-
-                    } else if (d =  0) {
-
-                        cout << " Nature of Roots: " << realroot << endl;
-
-                    } else {
-
-                        cout << " Nature of Roots: " << tworealroot << endl;
-
-                    }
-
-                } else if (answer2 == 0) {
-
-                    cout << " x1 = " << answer1 << endl;
-                    cout << " x2 = i" << endl;
-                    cout << "\n Discriminant: " << d << endl;
-
-                    if (d < 0) {
-
-                        cout << " Nature of Roots: " << noroot << endl;
-
-                    } else if (d =  0) {
-
-                        cout << " Nature of Roots: " << realroot << endl;
-
-                    } else {
-
-                        cout << " Nature of Roots: " << tworealroot << endl;
-
-                    }
-
-                } else {
-
-                    cout << " x1 = i" << endl;
-                    cout << " x2 = i" << endl;
-                    cout << "\n Discriminant: " << d << endl;6
-
-                    if (d < 0) {
-
-                        cout << " Nature of Roots: " << noroot << endl;
-
-                    } else if (d =  0) {
-
-                        cout << " Nature of Roots: " << realroot << endl;
-
-                    } else {
-
-                        cout << " Nature of Roots: " << tworealroot << endl;
-
-                    }
-                }
+            if (op1 == "plus" && op2 == "plus")
+            {
+                op1 = "+";
+                op2 = "+";
+            } else if (op1 == "plus" && op2 == "minus")
+            {
+                op1 = "+";
+                op2 = "-";
+            } else if (op1 == "minus" && op2 == "plus")
+            {
+                op1 = "-";
+                op2 = "+";
+            } else if (op1 == "minus" && op2 == "minus")
+            {
+                op1 = "-";
+                op2 = "-";
+            } else
+            {
+                cout << "\n Set as default \n" << endl;
+                op1 = "+";
+                op2 = "+";
+            }
 
 
-        } else {
+            cout << a << "x^2" << op1 << b << "x" << op2 << c << endl;
 
-        cout << " \n" << endl;
-        cout << " Invalid input" << endl;
+            } else if (a == 0){
 
-    }
+                cout << "Invalid input." << endl;
 
-    } else if (mode == 2)
+            }
+
+        }
+
+    string yon;
+
+    cout << "\n Calculation done. \n" << endl;
+    cout << "\n Exit? (Y/N): ";
+    cin >> yon;
+
+    if (yon == "Y" || yon == "y")
+    {
+        return 0;
+    } else
     {
 
-        cout << " Direct and Inverse Variation" << endl;
-
-    } else {
-
-        cout << " Invalid input" << endl;
-
     }
-
-    return 0;
 }
