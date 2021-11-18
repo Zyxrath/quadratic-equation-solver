@@ -3,9 +3,29 @@
 #include <cmath>
 using namespace std;
 
+int mode;
+string yon = "N";
+
 void Menu()
 {
+    string version = "v0.1";
 
+    cout << "\n Quick Math: " << version << endl;
+    cout << "\n 1. Quadratic Equation" << endl;
+    cout << "\n Choose a mode: ";
+    cin >> mode;
+}
+
+void ExitMenu()
+{
+    cout << "\n Calculation done. \n" << endl;
+    cout << "\n Exit? (Y/N): ";
+    cin >> yon;
+
+    if (yon == "N")
+    {
+        Menu();
+    }
 }
 
 void QuadraticEquation()
@@ -66,29 +86,25 @@ void QuadraticEquation()
         }
 
     }
+
+    if (mode == 1)
+    {
+        mode == 0;
+    } else {
+        mode == 0;
+    }
 }
 
 int main()
 {
 
-    int mode;
+    Menu();
 
-    cout << "\n Quick Math: v" << version << endl;
-    cout << "\n 1. Quadratic Equation" << endl;
-    cout << "\n Choose a mode: ";
-    cin >> mode;
-
-    string yon;
-
-    cout << "\n Calculation done. \n" << endl;
-    cout << "\n Exit? (Y/N): ";
-    cin >> yon;
-
-    if (yon == "Y" || yon == "y")
+    if (yon == "N")
+    {
+        ExitMenu();
+    } else if (yon == "Y")
     {
         return 0;
-    } else
-    {
-
     }
 }
