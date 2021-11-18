@@ -3,11 +3,13 @@
 #include <cmath>
 using namespace std;
 
-void QuadraticEquation
+void QuadraticEquation()
+{
+
+}
 
 int main()
 {
-    float version = 0.1;
 
     int mode;
 
