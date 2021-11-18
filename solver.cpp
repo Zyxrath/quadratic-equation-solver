@@ -3,39 +3,34 @@
 #include <cmath>
 using namespace std;
 
-void QuadraticEquation()
+void Menu()
 {
 
 }
 
-int main()
+void QuadraticEquation()
 {
+    if (mode == 1)
+    {
+        cout << "\n Quadratic Equation \n" << endl;
 
-    int mode;
+        int a, b, c, d;
+        string op1, op2;
 
-    cout << "\n Quick Math: v" << version << endl;
-    cout << "\n 1. Quadratic Equation" << endl;
-    cout << "\n Choose a mode: ";
-    cin >> mode;
-
-        if (mode == 1)
-        {
-            cout << "\n Quadratic Equation \n" << endl;
-
-            int a, b, c, d;
-            string op1, op2;
-
-            cout << " Enter the value of a: ";
-            cin >> a;
+        cout << " Enter the value of a: ";
+        cin >> a;
 
             if (a != 0){
 
             cout << " Enter plus or minus: ";
             cin >> op1;
+
             cout << " Enter the value of b: ";
             cin >> b;
+
             cout << " Enter plus or minus: ";
             cin >> op2;
+
             cout << " Enter the value of c: ";
             cin >> c;
 
@@ -62,16 +57,26 @@ int main()
                 op2 = "+";
             }
 
+        cout << a << "x^2" << op1 << b << "x" << op2 << c << endl;
 
-            cout << a << "x^2" << op1 << b << "x" << op2 << c << endl;
+        } else if (a == 0){
 
-            } else if (a == 0){
-
-                cout << "Invalid input." << endl;
-
-            }
+            cout << "Invalid input." << endl;
 
         }
+
+    }
+}
+
+int main()
+{
+
+    int mode;
+
+    cout << "\n Quick Math: v" << version << endl;
+    cout << "\n 1. Quadratic Equation" << endl;
+    cout << "\n Choose a mode: ";
+    cin >> mode;
 
     string yon;
 
