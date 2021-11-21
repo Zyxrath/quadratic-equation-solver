@@ -77,6 +77,10 @@ void QuadraticEquation()
 
         cout << "\n " << a << "x^2" << op1 << b << "x" << op2 << c << endl;
 
+        d = ((b * b) - 4 * a * c);
+
+        cout << "\n Discriminant: " << d << endl;
+
         } else if (a == 0){
 
             cout << "Invalid input." << endl;
