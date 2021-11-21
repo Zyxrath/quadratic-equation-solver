@@ -1,6 +1,7 @@
-#include <string>
 #include <iostream>
+#include <string>
 #include <cmath>
+#include <complex>
 using namespace std;
 
 int mode;
@@ -32,7 +33,7 @@ void QuadraticEquation()
 {
     cout << "\n Quadratic Equation \n" << endl;
 
-    int a, b, c, d;
+    double a, b, c, d, x1, x2;
     string op1, op2, roots;
 
     cout << " Enter the value of a: ";
@@ -90,6 +91,19 @@ void QuadraticEquation()
         cout << "\n Discriminant: " << d << endl;
 
         cout << " Nature of Roots: " << roots << endl;
+
+        double num = 2;
+
+        complex<double> x3 = sqrt(complex<double>((b*b)-4*a*c));
+        complex<double> x4 = sqrt(complex<double>((b*b)-4*a*c));
+
+        complex<double> x1 = (-b+x3);
+        complex<double> x2 = (-b-x4);
+
+        complex<double> x5 = x1/num*a;
+        complex<double> x6 = x2/num*a;
+
+        cout << " x1 = " << x5 << "  x2 = " << x6 << endl;
 
         } else if (a == 0){
 
