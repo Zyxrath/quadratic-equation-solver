@@ -97,14 +97,11 @@ void QuadraticEquation()
 
 int main()
 {
-
     Menu();
 
-    if (yon == "N")
-    {
+    while (yon == "N"){
         ExitMenu();
-    } else if (yon == "Y")
-    {
+    } if(yon == "Y"){
         return 0;
     }
 }
