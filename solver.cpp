@@ -33,7 +33,7 @@ void QuadraticEquation()
     cout << "\n Quadratic Equation \n" << endl;
 
     int a, b, c, d;
-    string op1, op2;
+    string op1, op2, roots;
 
     cout << " Enter the value of a: ";
     cin >> a;
@@ -79,7 +79,17 @@ void QuadraticEquation()
 
         d = ((b * b) - 4 * a * c);
 
+        if (d > 0){
+            roots = "The quadratic has two distinct real number solution.";
+        } else if (d == 0){
+            roots = "The quadratic has a repeated real number solution.";
+        } else {
+            roots = "The quadratic has neither real numbers as its solution.";
+        }
+
         cout << "\n Discriminant: " << d << endl;
+
+        cout << " Nature of Roots: " << roots << endl;
 
         } else if (a == 0){
 
