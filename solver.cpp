@@ -75,7 +75,7 @@ void QuadraticEquation()
             op2 = "+";
         }
 
-        cout << a << "x^2" << op1 << b << "x" << op2 << c << endl;
+        cout << "\n " << a << "x^2" << op1 << b << "x" << op2 << c << endl;
 
         } else if (a == 0){
 
